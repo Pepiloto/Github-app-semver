@@ -1,0 +1,22 @@
+[package]
+name = "github_app_semver"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "github_app_lib"
+path = "src/lib/lib.rs"
+
+[[bin]]
+name = "github_app"
+path = "src/bin/main.rs"
+
+[dependencies]
+octocrab = "0.43.0"
+serde = "1.0.217"
+serde_json = "1.0.138"
+axum = { version = "0.8.1", features = ["http2"] }
+tokio = { version = "1.43.0", features = ["full"] }
+dotenv = "0.15.0"
+jsonwebtoken = "9.3.1"
+base64 = "0.22.1"
